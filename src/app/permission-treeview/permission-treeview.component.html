@@ -22,9 +22,15 @@
   </div>
 
   <div class="permission-section">
-    <h3>Permission setting</h3>
-    
-      <div class="accordion-item-content">
+    <dx-accordion
+      [collapsible]="true"
+      [multiple]="false"
+      [animationsEnabled]="true"
+      id = "mainAccordion">
+
+    <dxi-item title="Permission setting">
+      <div style="padding: 10px;">
+        <div class="accordion-item-content">
         <dx-tree-view
             #myTree
             [items]="permissions"
@@ -36,6 +42,8 @@
             showCheckBoxesMode="normal"
             [selectNodesRecursive]="true"> 
         </dx-tree-view>
-      </div> 
-  </div>
+        </div> 
+      </div>
+    </dxi-item>
+  </dx-accordion>
 </div>
