@@ -1,0 +1,50 @@
+<div class="user-form-container tagbox-style">
+  
+  <h2>User_tagbox</h2>
+
+  <div class="profile-section">
+    <div class="profile-image-wrapper">
+      <div class="profile-circle">
+        <i class="dx-icon-user"></i>
+      </div>
+    </div>
+
+    <div class="form-inputs">
+      <div class="input-group">
+        <label>Login name:</label>
+        <dx-text-box placeholder="Enter login name" width="100%"></dx-text-box>
+      </div>
+      <div class="input-group">
+        <label>Password:</label>
+        <dx-text-box mode="password" placeholder="Enter password" width="100%"></dx-text-box>
+      </div>
+    </div>
+  </div>
+
+  <div class="permission-section">
+    <h3>Permission Setting</h3>
+    <div class="permission-box-gray">
+        
+        <label class="hint-text">Select permissions from the list:</label>
+        
+        <dx-tag-box
+            [dataSource]="groupPermissions"
+            displayExpr="text"
+            valueExpr="id"
+            [grouped]="true"
+            groupTemplate="groupTemplate"
+            [searchEnabled]="true"
+            placeholder="Click to select permissions..."
+            [showSelectionControls]="true"
+            applyValueMode="useButtons">
+            
+            <div *dxTemplate="let data of 'groupTemplate'">
+                <span class="group-header">
+                    <i class="dx-icon-folder"></i> {{ data.key }}
+                </span>
+            </div>
+
+        </dx-tag-box>
+    </div>
+  </div>
+</div>

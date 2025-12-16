@@ -1,0 +1,80 @@
+.user-form-container {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .header-with-search {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;       
+    margin-bottom: 15px;       
+    padding-bottom: 10px;      
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    color: #333;
+    font-size: 18px;
+}
+}
+
+.profile-section {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+
+  .profile-image-wrapper {
+    width: 100px;
+    text-align: center;
+
+    .profile-circle {
+      width: 80px;
+      height: 80px;
+      background-color: #e0e0e0;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        font-size: 40px;
+        color: #666;
+      }
+    }
+  }
+
+  .form-inputs {
+    flex: 1;
+
+    .input-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.permission-section {
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .permission-box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+  }
+
+}

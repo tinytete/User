@@ -1,0 +1,41 @@
+<div class="user-form-container">
+  
+  <h2>User_treeview</h2>
+
+  <div class="profile-section">
+    <div class="profile-image-wrapper">
+      <div class="profile-circle">
+        <i class="dx-icon-user"></i>
+      </div>
+    </div>
+
+    <div class="form-inputs">
+      <div class="input-group">
+        <label>Login name:</label>
+        <dx-text-box placeholder="Enter login name" width="100%"></dx-text-box>
+      </div>
+      <div class="input-group">
+        <label>Password:</label>
+        <dx-text-box mode="password" placeholder="Enter password" width="100%"></dx-text-box>
+      </div>
+    </div>
+  </div>
+
+  <div class="permission-section">
+    <h3>Permission setting</h3>
+    
+      <div class="accordion-item-content">
+        <dx-tree-view
+            #myTree
+            [items]="permissions"
+            width="100%"
+            height="500"
+            [searchEnabled]="true"
+            searchMode="contains"
+            selectionMode="multiple"
+            showCheckBoxesMode="normal"
+            [selectNodesRecursive]="true"> 
+        </dx-tree-view>
+      </div> 
+  </div>
+</div>
